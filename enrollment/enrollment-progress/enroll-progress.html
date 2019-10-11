@@ -1,0 +1,6 @@
+<div class="enroll-progress-container tile">
+  <progress-circle percentage="$ctrl.progressPercentage()" label="$ctrl.progressLabel()"></progress-circle>
+  <div class="enroll-progress-steps-container">
+    <div class="enroll-progress-step" ng-class="{active: step.active}" ng-repeat="step in $ctrl.steps">Step {{$index + 1}} - {{step.title}}</div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.enroll-container {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  .progress-column {
+    width: 300px;
+    margin-right: 20px;
+    padding: 15px;
+  }
+  .enrollment-column {
+    width: 100%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,19 @@
+
+@import '../../resources';
+.progress-ring {
+  margin: 15px auto;
+  // .progress-ring__track {
+
+  // }
+  .progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    // axis compensation
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  text {
+    fill: $white-text;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}

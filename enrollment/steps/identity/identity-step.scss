@@ -1,0 +1,48 @@
+.identity-step {
+  .identity-reminder-membership {
+    h3 {
+      margin-top: 0px;
+    }
+  }
+  color: #fff;
+  [ng-animate-swap] {
+    &.ng-enter {
+      position: absolute;
+      top: 271px;
+    }
+    &.ng-enter-active {
+      position: absolute;
+      top: 71px;
+
+    }
+    &.ng-leave {
+      position: absolute;
+      top: 71px;
+    }
+    &.ng-leave-active {
+      top: -129px;
+      position: absolute;
+    }
+  }
+
+  .control-label {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  input {
+    width: 350px;
+    border-radius: 0px;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 3px solid #fff;
+    caret-color: #fff;
+    padding: 0px;
+    color: #fff;
+    font-size: 18px;
+    &:focus {
+      box-shadow: none;
+      border-bottom: 3px solid #fff;
+    }
+  }
+
+}

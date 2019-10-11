@@ -1,0 +1,8 @@
+<div class="membership-parts">
+  <div class="membership-part tile" ng-repeat="part in $ctrl.step.parts" ng-click="$ctrl.submitMembership(part)">
+    <img src="https://github.com/joelcdoyle/angularjs-wvt8jj-web-bank-demo/blob/master/business-partnership.png?raw=true" alt="Membership Icon">
+    <div class="membership-tile-title">{{part.title}}</div>
+    <div class="membership-tile-desc">{{part.text}}</div>
+    <button class="btn btn-round">APPLY</button>
+  </div>
+</div>

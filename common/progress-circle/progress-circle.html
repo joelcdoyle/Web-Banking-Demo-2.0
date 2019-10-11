@@ -1,0 +1,29 @@
+<svg
+   class="progress-ring"
+   width="120"
+   height="120">
+  <circle
+    id="progress-ring__track"
+    class="progress-ring__track"
+    stroke="rgba(255,255,255,0.1)"
+    stroke-width="10"
+    stroke-linecap="round"
+    fill="transparent"
+    r="52"
+    cx="60"
+    cy="60"/>
+  <circle
+    id="progress-ring__circle"
+    class="progress-ring__circle"
+    stroke="rgba(255,255,255,1)"
+    stroke-width="8"
+    stroke-linecap="round"
+    fill="transparent"
+    r="52"
+    cx="60"
+    cy="60"/>
+  <text y="55">
+    <tspan x="45" dy="0">Step</tspan>
+    <tspan x="38" dy="1.2em">{{$ctrl.label}}</tspan>
+    </text>
+</svg>

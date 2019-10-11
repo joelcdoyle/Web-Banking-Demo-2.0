@@ -1,0 +1,40 @@
+<div class="identity-step">
+	<div class="identity-reminder-membership">
+		<div>Membership Type: {{$ctrl.membership.title}}</div>
+		<h3>LET'S GET STARTED.</h3>
+	</div>
+	<form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
+		<div ng-animate-swap="$ctrl.partIndex">
+			<div ng-switch="$ctrl.currentPart.key">
+
+				<div ng-switch-when="firstName">
+					<text-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0" on-enter="$ctrl.nextPart()"></text-input>
+				</div>
+				<div ng-switch-when="lastName">
+					<text-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"  on-enter="$ctrl.nextPart()"></text-input>
+				</div>
+				<div ng-switch-when="ssn">
+					<ssn-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"  on-enter="$ctrl.nextPart()"></ssn-input>
+				</div>
+				<div ng-switch-when="phone">
+					<phone-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"  on-enter="$ctrl.nextPart()"></phone-input>
+				</div>
+				<div ng-switch-when="email">
+					<email-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"  on-enter="$ctrl.nextPart()"></email-input>
+				</div>
+			</div>
+
+			<button type="button" class="btn btn-round"  ng-class="{'btn-primary': $ctrl.identityForm[$ctrl.currentPart.key].$valid && $ctrl.canNext()}"
+        ng-click="$ctrl.nextPart()" ng-disabled="$ctrl.identityForm[$ctrl.currentPart.key].$invalid || !$ctrl.canNext()">NEXT</button>
+	  </div>
+  </form>
+
+<!-- 
+  <label>Show JSON<input type="checkbox" ng-model="$ctrl.showJson"></label>
+  <div ng-show="$ctrl.showJson">{{$ctrl.partModels}}</div> -->
+</div>
