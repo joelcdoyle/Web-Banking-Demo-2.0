@@ -12,7 +12,7 @@ export default function phoneInput() {
       onEnter: "&"
     },
     bindToController: true,
-    link: function(scope, elem, attrs) {
+    link: function(scope, elem, attrs, form) {
       scope.$ctrl.form = form[0];
       let ngModel = elem.find("input").controller("ngModel");
 
