@@ -21,10 +21,15 @@ class IdentityStepCtrl {
   }
 
   submitIdentity() {
-    //this.EnrollmentService.submitIdentity(this.identity);
+    this.EnrollmentService.submitIdentity(this.identity);
   }
 
   nextPart() {
+    if (this.identityForm.$valid && this.partIndex == this.parts.length) {
+      this.EnrollmentService.submitIdentity(membership);
+      return;
+    }
+
     if (this.identityForm[this.currentPart.key].$valid) {
       this.partIndex++;
       this.currentPart = this.parts[this.partIndex];
@@ -36,7 +41,8 @@ class IdentityStepCtrl {
     if (this.partIndex == null || this.parts == null) {
       return false;
     }
-    return this.partIndex <= this.parts.length;
+
+    return this.partIndex < this.parts.length;
   }
 }
 export default IdentityStepCtrl;
