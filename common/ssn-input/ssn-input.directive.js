@@ -30,6 +30,7 @@ export default function ssnInput() {
                 (numbers[3] ? "-" + numbers[3] : "")
         );
         ngModel.$render();
+        return numbers;
       });
     }
   };
