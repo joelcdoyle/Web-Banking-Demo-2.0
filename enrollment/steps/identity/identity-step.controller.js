@@ -25,10 +25,10 @@ class IdentityStepCtrl {
   }
 
   nextPart() {
-    if (this.identityForm.$valid && this.partIndex == this.parts.length) {
-      this.EnrollmentService.submitIdentity(membership);
-      return;
-    }
+    // if (this.identityForm.$valid && this.partIndex == this.parts.length) {
+    //   this.EnrollmentService.submitIdentity(membership);
+    //   return;
+    // }
 
     if (this.identityForm[this.currentPart.key].$valid) {
       this.partIndex++;
