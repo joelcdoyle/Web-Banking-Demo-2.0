@@ -19,6 +19,7 @@ class EnrollmentCtrl {
   }
 
   advanceEnrollment(state) {
+    console.log("advanceEnrollment: ", state);
     this.steps.forEach((step) => {
       step.active = false;
     })

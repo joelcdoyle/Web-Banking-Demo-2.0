@@ -82,17 +82,20 @@ class EnrollmentService {
       {
         title: "Fund Your Account",
         order: 3,
-        id: "FUND"
+        id: "FUND",
+        state: "funding"
       },
       {
         title: "Digital Banking Setup",
         order: 4,
-        id: "DIGITAL"
+        id: "DIGITAL",
+        state: "digital"
       },
       {
         title: "The Legal Stuff",
         order: 5,
-        id: "LEGAL"
+        id: "LEGAL",
+        state: "legal"
       }
     ]);
   }
@@ -103,6 +106,7 @@ class EnrollmentService {
   }
 
   submitIdentity(identity) {
+    console.log("submitIdentity: ", identity);
     this.identity = identity;
     this.advanceEnrollment("funding");
   }
