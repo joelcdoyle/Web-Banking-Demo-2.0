@@ -26,7 +26,7 @@ class IdentityStepCtrl {
 
   nextPart() {
     if (this.identityForm.$valid && this.partIndex == this.parts.length - 1) {
-      this.EnrollmentService.submitIdentity(membership);
+      this.EnrollmentService.submitIdentity(this.identity);
       return;
     }
 
